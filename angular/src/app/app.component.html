@@ -1,3 +1,27 @@
-<h1>WELCOME TO ETH CROWDFUNDER!</h1>
-<button (click)="onConnectWallet()">CONNECT DAH WALLET</button>
-<p>Primary account is: {{ web3.primaryAccount$ | async }}</p>
+<div class="container">
+  <div class="navbar">
+    <button mat-mini-fab aria-label="New campaign">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      aria-label="Connect Metamask"
+      (click)="onConnectWallet()"
+    >
+      <mat-icon>power</mat-icon>
+    </button>
+  </div>
+  <div class="menu"></div>
+  <div class="content">
+    <mat-card *ngIf="!account">
+      <mat-card-title>Uh oh...</mat-card-title>
+      <mat-card-content
+        >Please connect your Metamask wallet to view the
+        campaigns</mat-card-content
+      >
+      <button mat-raised-button color="accent" (click)="onConnectWallet()">
+        Connect
+      </button>
+    </mat-card>
+  </div>
+</div>

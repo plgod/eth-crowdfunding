@@ -4,7 +4,7 @@ import Web3 from "web3";
 import { CrowdfundingCampaignContract } from "./models/crowdfunding-campaign.contract";
 
 @Injectable({
-  providedIn: "root",
+  providedIn: "root"
 })
 export class Web3Service {
   private web3js: Web3;

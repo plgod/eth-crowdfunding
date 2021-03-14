@@ -11,17 +11,31 @@
       <mat-icon>power</mat-icon>
     </button>
   </div>
-  <div class="menu"></div>
+  <div class="menu">
+    <div class="menu-items">
+      <button
+        *ngFor="let category of categories"
+        [class.selected]="selectedCategory === category"
+        (click)="onChangeCategory(category)"
+      >
+        {{ category }}
+      </button>
+    </div>
+  </div>
   <div class="content">
+    <p *ngFor="let campaign of campaigns">
+      We have a campaign called {{ campaign.title }} at address
+      {{ campaign.contractAddress }} with {{ campaign.currentFunding }} funded
+      out of {{ campaign.goal }}
+    </p>
     <mat-card *ngIf="!account">
       <mat-card-title>Uh oh...</mat-card-title>
-      <mat-card-content
-        >Please connect your Metamask wallet to view the
-        campaigns</mat-card-content
-      >
-      <button mat-raised-button color="accent" (click)="onConnectWallet()">
-        Connect
-      </button>
+      <mat-card-content>
+        <p>Please connect your Metamask wallet to view the campaigns</p>
+        <button mat-raised-button color="accent" (click)="onConnectWallet()">
+          Connect
+        </button>
+      </mat-card-content>
     </mat-card>
   </div>
 </div>

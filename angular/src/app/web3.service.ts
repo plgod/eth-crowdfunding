@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Observable, Subject } from "rxjs";
+import { Observable, Subject, BehaviorSubject } from "rxjs";
 import Web3 from "web3";
 import { CrowdfundingCampaignContract } from "./models/crowdfunding-campaign.contract";
 
@@ -9,7 +9,7 @@ import { CrowdfundingCampaignContract } from "./models/crowdfunding-campaign.con
 export class Web3Service {
   private web3js: Web3;
   public accounts: string[];
-  private primaryAccount = new Subject<string>();
+  private primaryAccount = new BehaviorSubject<string>(null);
 
   public readonly primaryAccount$: Observable<
     string
@@ -17,12 +17,21 @@ export class Web3Service {
 
   constructor() {
     this.web3js = new Web3(window["ethereum"]);
+    if ((this.web3js.currentProvider as any).selectedAddress)
+      this.primaryAccount.next(
+        (this.web3js.currentProvider as any).selectedAddress
+      );
+    console.log(
+      `Wallet already connected with account ${this.primaryAccount.value}`
+    );
   }
 
   async connectAccount() {
     this.accounts = await this.web3js.eth.requestAccounts();
     this.primaryAccount.next(this.accounts[0]);
-    console.log(this.accounts);
+    console.log(
+      `Wallet now connected with account ${this.primaryAccount.value}`
+    );
   }
 
   async getBalance(contractAddress: string): Promise<number> {

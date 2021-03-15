@@ -16,4 +16,22 @@ export const CrowdfundingCampaignContract: AbiItem[] = [
     inputs: [],
     outputs: [{ name: "", type: "uint" }],
   },
+  {
+    type: "function",
+    name: "getGoal",
+    constant: true,
+    payable: false,
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint" }],
+  },
+  {
+    type: "function",
+    name: "backCampaign",
+    constant: false,
+    payable: true,
+    stateMutability: "payable",
+    inputs: [],
+    outputs: [],
+  },
 ];

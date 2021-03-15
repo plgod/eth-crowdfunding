@@ -53,8 +53,11 @@
 
   .content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
     height: 100%;
+    gap: 30px;
 
     mat-card {
       background-color: #ffffffd9;

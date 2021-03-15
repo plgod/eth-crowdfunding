@@ -4,10 +4,12 @@ import Web3 from "web3";
 import { CrowdfundingCampaignContract } from "./models/crowdfunding-campaign.contract";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class Web3Service {
   private web3js: Web3;
+  private isConnected = false;
+  private isMetamask: boolean;
   public accounts: string[];
   private primaryAccount = new BehaviorSubject<string>(null);
 
@@ -16,30 +18,50 @@ export class Web3Service {
   > = this.primaryAccount.asObservable();
 
   constructor() {
-    this.web3js = new Web3(window["ethereum"]);
-    if ((this.web3js.currentProvider as any).selectedAddress)
-      this.primaryAccount.next(
-        (this.web3js.currentProvider as any).selectedAddress
-      );
-    console.log(
-      `Wallet already connected with account ${this.primaryAccount.value}`
-    );
+    this.isMetamask = !!window["ethereum"];
+    if (this.isMetamask) {
+      this.web3js = new Web3(window["ethereum"]);
+    }
   }
 
   async connectAccount() {
     this.accounts = await this.web3js.eth.requestAccounts();
+    console.log(this.accounts);
     this.primaryAccount.next(this.accounts[0]);
-    console.log(
-      `Wallet now connected with account ${this.primaryAccount.value}`
-    );
   }
 
-  async getBalance(contractAddress: string): Promise<number> {
+  getBalance(contractAddress: string): Promise<number> {
     const contract = new this.web3js.eth.Contract(
       CrowdfundingCampaignContract,
       contractAddress
     );
 
-    return await contract.methods.getBalance().call();
+    return contract.methods.getBalance().call();
+  }
+
+  getGoal(contractAddress: string): Promise<number> {
+    const contract = new this.web3js.eth.Contract(
+      CrowdfundingCampaignContract,
+      contractAddress
+    );
+
+    return contract.methods.getGoal().call();
+  }
+
+  pledge(contractAddress: string, amount: number) {
+    if (!this.primaryAccount.value) {
+      console.error("Web3: pledge called but no account connected");
+      return;
+    }
+
+    const contract = new this.web3js.eth.Contract(
+      CrowdfundingCampaignContract,
+      contractAddress
+    );
+
+    contract.methods
+      .backCampaign()
+      .send({ from: this.primaryAccount.value, value: amount });
+    console.log("Pledge sent to MetaMask");
   }
 }

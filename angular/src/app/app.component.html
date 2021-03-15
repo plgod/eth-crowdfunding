@@ -23,19 +23,31 @@
     </div>
   </div>
   <div class="content">
-    <p *ngFor="let campaign of campaigns">
-      We have a campaign called {{ campaign.title }} at address
-      {{ campaign.contractAddress }} with {{ campaign.currentFunding }} funded
-      out of {{ campaign.goal }}
-    </p>
     <mat-card *ngIf="!account">
       <mat-card-title>Uh oh...</mat-card-title>
       <mat-card-content>
-        <p>Please connect your Metamask wallet to view the campaigns</p>
+        <p>Please connect your Metamask wallet to pledge to campaigns</p>
         <button mat-raised-button color="accent" (click)="onConnectWallet()">
           Connect
         </button>
       </mat-card-content>
+    </mat-card>
+    <mat-card *ngFor="let campaign of campaigns">
+      <mat-card-title>{{ campaign.title }}</mat-card-title>
+      <p>{{ campaign.description }}</p>
+      <mat-progress-bar
+        mode="determinate"
+        [value]="(campaign.currentFunding / campaign.goal) * 100"
+      ></mat-progress-bar>
+      <h4>{{ campaign.contractAddress }}</h4>
+      <button
+        *ngIf="account"
+        mat-raised-button
+        color="accent"
+        (click)="onPledge(campaign)"
+      >
+        Pledge 250,000 Wei
+      </button>
     </mat-card>
   </div>
 </div>

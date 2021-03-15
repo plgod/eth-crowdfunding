@@ -9,7 +9,7 @@ export interface ICampaignWithBlockchainInfo extends ICampaign {
 }
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class CampaignsService {
   constructor(private web3: Web3Service) {}
@@ -21,8 +21,8 @@ export class CampaignsService {
   ): Promise<ICampaignWithBlockchainInfo> {
     return {
       ...campaign,
-      goal: 1000000,
-      currentFunding: await this.web3.getBalance(campaign.contractAddress)
+      goal: await this.web3.getGoal(campaign.contractAddress),
+      currentFunding: await this.web3.getBalance(campaign.contractAddress),
     };
   }
 }

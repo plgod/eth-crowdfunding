@@ -16,6 +16,10 @@ contract CrowdfundingCampaign {
         owner = payable(msg.sender);
         goal = _goal;
     }
+
+    function getGoal() public view returns(uint) {
+        return goal;
+    }
     
     function getBalance() public view returns(uint) {
         return address(this).balance;

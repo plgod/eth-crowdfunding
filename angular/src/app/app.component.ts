@@ -1,16 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { Web3Service } from "./web3.service";
 import { CAMPAIGNS } from "./mock-campaigns";
-import { filter } from "rxjs/operators";
+import { filter, map } from "rxjs/operators";
 import {
   CampaignsService,
-  ICampaignWithBlockchainInfo
+  ICampaignWithBlockchainInfo,
 } from "./campaigns.service";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
   public account: string;
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     "Music",
     "Games",
     "Travel",
-    "Misc"
+    "Misc",
   ];
   campaigns: ICampaignWithBlockchainInfo[];
 
@@ -35,16 +35,21 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.resolveCampaigns();
+    this.web3.primaryAccount$.subscribe((account) => (this.account = account));
   }
 
   private async resolveCampaigns() {
-    const account = await this.web3.primaryAccount$;
-    console.log(account);
-    this.campaigns = [
-      await this.campaignsService.resolveCampaign(
-        (await this.campaignsService.campaigns$.toPromise())[0]
+    this.campaigns = await this.campaignsService.campaigns$
+      .pipe(
+        map((campaigns) =>
+          Promise.all(
+            campaigns.map((campaign) =>
+              this.campaignsService.resolveCampaign(campaign)
+            )
+          )
+        )
       )
-    ];
+      .toPromise();
   }
 
   onConnectWallet(): void {
@@ -54,5 +59,9 @@ export class AppComponent implements OnInit {
 
   onChangeCategory(category: string) {
     this.selectedCategory = category;
+  }
+
+  onPledge(campaign: ICampaignWithBlockchainInfo) {
+    this.web3.pledge(campaign.contractAddress, 250000);
   }
 }

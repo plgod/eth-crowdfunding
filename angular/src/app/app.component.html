@@ -32,21 +32,21 @@
         </button>
       </mat-card-content>
     </mat-card>
-    <mat-card *ngFor="let campaign of campaigns">
-      <mat-card-title>{{ campaign.title }}</mat-card-title>
-      <p>{{ campaign.description }}</p>
+    <mat-card *ngFor="let campaign of campaigns; index as i">
+      <mat-card-title>Campaign #{{ i }}</mat-card-title>
+      <p>Some crowdfunding campaign</p>
       <mat-progress-bar
         mode="determinate"
-        [value]="(campaign.currentFunding / campaign.goal) * 100"
+        [value]="(campaign.balance / campaign.goal) * 100"
       ></mat-progress-bar>
-      <h4>{{ campaign.contractAddress }}</h4>
+      <h4>{{ campaign.owner }}</h4>
       <button
         *ngIf="account"
         mat-raised-button
         color="accent"
-        (click)="onPledge(campaign)"
+        (click)="onPledge(i)"
       >
-        Pledge 250,000 Wei
+        Pledge 0.25 Gwei
       </button>
     </mat-card>
   </div>

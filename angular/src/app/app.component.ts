@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     "Travel",
     "Misc",
   ];
-  campaigns: ICampaignWithBlockchainInfo[];
+  campaigns: any[];
 
   constructor(
     public web3: Web3Service,
@@ -39,29 +39,30 @@ export class AppComponent implements OnInit {
   }
 
   private async resolveCampaigns() {
-    this.campaigns = await this.campaignsService.campaigns$
-      .pipe(
-        map((campaigns) =>
-          Promise.all(
-            campaigns.map((campaign) =>
-              this.campaignsService.resolveCampaign(campaign)
-            )
-          )
-        )
-      )
-      .toPromise();
+    this.campaigns = await this.web3.getCampaigns();
+    // this.campaigns = await this.campaignsService.campaigns$
+    //   .pipe(
+    //     map((campaigns) =>
+    //       Promise.all(
+    //         campaigns.map((campaign) =>
+    //           this.campaignsService.resolveCampaign(campaign)
+    //         )
+    //       )
+    //     )
+    //   )
+    //   .toPromise();
   }
 
   onConnectWallet(): void {
     console.log("IN CONNECT WALLET");
-    this.web3.connectAccount();
+    this.web3.connectMetamask();
   }
 
   onChangeCategory(category: string) {
     this.selectedCategory = category;
   }
 
-  onPledge(campaign: ICampaignWithBlockchainInfo) {
-    this.web3.pledge(campaign.contractAddress, 250000);
+  onPledge(campaignId: number) {
+    this.web3.pledge(campaignId, 250000000);
   }
 }

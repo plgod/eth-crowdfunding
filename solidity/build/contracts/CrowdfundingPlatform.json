@@ -1,0 +1,2810 @@
+{
+  "contractName": "CrowdfundingPlatform",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "campaigns",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "goal",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "numCampaigns",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_goal",
+          "type": "uint256"
+        }
+      ],
+      "name": "launchCampaign",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"campaigns\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"goal\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_goal\",\"type\":\"uint256\"}],\"name\":\"launchCampaign\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numCampaigns\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Crowdfunding on blockchain\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Crowdfunding Platform\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/plgod/src/eth-crowdfunding/solidity/contracts/crowdfunding_platform.sol\":\"CrowdfundingPlatform\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/plgod/src/eth-crowdfunding/solidity/contracts/crowdfunding_platform.sol\":{\"keccak256\":\"0xf0069687ec0f7e7eeeb8a856ebb65263b591618a0557c7c7d850a0c3b2a266ed\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://61cc620a68f19c4baae6ad182f63a83fe6620f277b50880d24dcf9652e95a152\",\"dweb:/ipfs/Qme1FUq1sJbMYtBAVaMESCvNdDKhtcem5Ne38yv2fxpSzq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610350806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063141961bc146100465780632664edcd146100785780632c0f7b6f146100a8575b600080fd5b610060600480360381019061005b91906101b6565b6100c6565b60405161006f939291906101fd565b60405180910390f35b610092600480360381019061008d91906101b6565b610110565b60405161009f9190610234565b60405180910390f35b6100b061019b565b6040516100bd9190610234565b60405180910390f35b60016020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010154908060020154905083565b60008060016000805481526020019081526020016000209050338160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082816001018190555060008160020181905550600080815461018d9061028b565b919050819055915050919050565b60005481565b6000813590506101b081610303565b92915050565b6000602082840312156101c857600080fd5b60006101d6848285016101a1565b91505092915050565b6101e88161024f565b82525050565b6101f781610281565b82525050565b600060608201905061021260008301866101df565b61021f60208301856101ee565b61022c60408301846101ee565b949350505050565b600060208201905061024960008301846101ee565b92915050565b600061025a82610261565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061029682610281565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156102c9576102c86102d4565b5b600182019050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b61030c81610281565b811461031757600080fd5b5056fea2646970667358221220c3598aa9229a288c326a9fb4db5df64d8db06415631d6556ccac23a67826d9f464736f6c63430008030033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063141961bc146100465780632664edcd146100785780632c0f7b6f146100a8575b600080fd5b610060600480360381019061005b91906101b6565b6100c6565b60405161006f939291906101fd565b60405180910390f35b610092600480360381019061008d91906101b6565b610110565b60405161009f9190610234565b60405180910390f35b6100b061019b565b6040516100bd9190610234565b60405180910390f35b60016020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010154908060020154905083565b60008060016000805481526020019081526020016000209050338160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082816001018190555060008160020181905550600080815461018d9061028b565b919050819055915050919050565b60005481565b6000813590506101b081610303565b92915050565b6000602082840312156101c857600080fd5b60006101d6848285016101a1565b91505092915050565b6101e88161024f565b82525050565b6101f781610281565b82525050565b600060608201905061021260008301866101df565b61021f60208301856101ee565b61022c60408301846101ee565b949350505050565b600060208201905061024960008301846101ee565b92915050565b600061025a82610261565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061029682610281565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156102c9576102c86102d4565b5b600182019050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b61030c81610281565b811461031757600080fd5b5056fea2646970667358221220c3598aa9229a288c326a9fb4db5df64d8db06415631d6556ccac23a67826d9f464736f6c63430008030033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:2275:2",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "59:87:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "69:29:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "offset",
+                        "nodeType": "YulIdentifier",
+                        "src": "91:6:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "calldataload",
+                      "nodeType": "YulIdentifier",
+                      "src": "78:12:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "78:20:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "value",
+                      "nodeType": "YulIdentifier",
+                      "src": "69:5:2"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "134:5:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "validator_revert_t_uint256",
+                      "nodeType": "YulIdentifier",
+                      "src": "107:26:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "107:33:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "107:33:2"
+                }
+              ]
+            },
+            "name": "abi_decode_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "offset",
+                "nodeType": "YulTypedName",
+                "src": "37:6:2",
+                "type": ""
+              },
+              {
+                "name": "end",
+                "nodeType": "YulTypedName",
+                "src": "45:3:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "53:5:2",
+                "type": ""
+              }
+            ],
+            "src": "7:139:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "218:196:2",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "264:16:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "273:1:2",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "276:1:2",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "266:6:2"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "266:12:2"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "266:12:2"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "239:7:2"
+                          },
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "248:9:2"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "sub",
+                          "nodeType": "YulIdentifier",
+                          "src": "235:3:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "235:23:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "260:2:2",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "slt",
+                      "nodeType": "YulIdentifier",
+                      "src": "231:3:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "231:32:2"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "228:2:2"
+                },
+                {
+                  "nodeType": "YulBlock",
+                  "src": "290:117:2",
+                  "statements": [
+                    {
+                      "nodeType": "YulVariableDeclaration",
+                      "src": "305:15:2",
+                      "value": {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "319:1:2",
+                        "type": "",
+                        "value": "0"
+                      },
+                      "variables": [
+                        {
+                          "name": "offset",
+                          "nodeType": "YulTypedName",
+                          "src": "309:6:2",
+                          "type": ""
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "YulAssignment",
+                      "src": "334:63:2",
+                      "value": {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "name": "headStart",
+                                "nodeType": "YulIdentifier",
+                                "src": "369:9:2"
+                              },
+                              {
+                                "name": "offset",
+                                "nodeType": "YulIdentifier",
+                                "src": "380:6:2"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "add",
+                              "nodeType": "YulIdentifier",
+                              "src": "365:3:2"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "365:22:2"
+                          },
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "389:7:2"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "abi_decode_t_uint256",
+                          "nodeType": "YulIdentifier",
+                          "src": "344:20:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "344:53:2"
+                      },
+                      "variableNames": [
+                        {
+                          "name": "value0",
+                          "nodeType": "YulIdentifier",
+                          "src": "334:6:2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_decode_tuple_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "188:9:2",
+                "type": ""
+              },
+              {
+                "name": "dataEnd",
+                "nodeType": "YulTypedName",
+                "src": "199:7:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "211:6:2",
+                "type": ""
+              }
+            ],
+            "src": "152:262:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "501:61:2",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "518:3:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "549:5:2"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_address_payable",
+                          "nodeType": "YulIdentifier",
+                          "src": "523:25:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "523:32:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "511:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "511:45:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "511:45:2"
+                }
+              ]
+            },
+            "name": "abi_encode_t_address_payable_to_t_address_payable_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "489:5:2",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "496:3:2",
+                "type": ""
+              }
+            ],
+            "src": "420:142:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "633:53:2",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "650:3:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "673:5:2"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_uint256",
+                          "nodeType": "YulIdentifier",
+                          "src": "655:17:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "655:24:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "643:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "643:37:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "643:37:2"
+                }
+              ]
+            },
+            "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "621:5:2",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "628:3:2",
+                "type": ""
+              }
+            ],
+            "src": "568:118:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "862:304:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "872:26:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "884:9:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "895:2:2",
+                        "type": "",
+                        "value": "96"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "880:3:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "880:18:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "872:4:2"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "968:6:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "981:9:2"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "992:1:2",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "977:3:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "977:17:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_address_payable_to_t_address_payable_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "908:59:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "908:87:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "908:87:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value1",
+                        "nodeType": "YulIdentifier",
+                        "src": "1049:6:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1062:9:2"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1073:2:2",
+                            "type": "",
+                            "value": "32"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1058:3:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1058:18:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "1005:43:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1005:72:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1005:72:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value2",
+                        "nodeType": "YulIdentifier",
+                        "src": "1131:6:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1144:9:2"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1155:2:2",
+                            "type": "",
+                            "value": "64"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1140:3:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1140:18:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "1087:43:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1087:72:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1087:72:2"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_address_payable_t_uint256_t_uint256__to_t_address_payable_t_uint256_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "818:9:2",
+                "type": ""
+              },
+              {
+                "name": "value2",
+                "nodeType": "YulTypedName",
+                "src": "830:6:2",
+                "type": ""
+              },
+              {
+                "name": "value1",
+                "nodeType": "YulTypedName",
+                "src": "838:6:2",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "846:6:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "857:4:2",
+                "type": ""
+              }
+            ],
+            "src": "692:474:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1270:124:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1280:26:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "1292:9:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1303:2:2",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1288:3:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1288:18:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "1280:4:2"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "1360:6:2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1373:9:2"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1384:1:2",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1369:3:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1369:17:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "1316:43:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1316:71:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1316:71:2"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "1242:9:2",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "1254:6:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "1265:4:2",
+                "type": ""
+              }
+            ],
+            "src": "1172:222:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1453:51:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1463:35:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1492:5:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "1474:17:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1474:24:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "1463:7:2"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address_payable",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1435:5:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "1445:7:2",
+                "type": ""
+              }
+            ],
+            "src": "1400:104:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1555:81:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1565:65:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1580:5:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1587:42:2",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "1576:3:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1576:54:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "1565:7:2"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1537:5:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "1547:7:2",
+                "type": ""
+              }
+            ],
+            "src": "1510:126:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1687:32:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1697:16:2",
+                  "value": {
+                    "name": "value",
+                    "nodeType": "YulIdentifier",
+                    "src": "1708:5:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "1697:7:2"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1669:5:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "1679:7:2",
+                "type": ""
+              }
+            ],
+            "src": "1642:77:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1768:190:2",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1778:33:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1805:5:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint256",
+                      "nodeType": "YulIdentifier",
+                      "src": "1787:17:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1787:24:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "value",
+                      "nodeType": "YulIdentifier",
+                      "src": "1778:5:2"
+                    }
+                  ]
+                },
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "1901:22:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [],
+                          "functionName": {
+                            "name": "panic_error_0x11",
+                            "nodeType": "YulIdentifier",
+                            "src": "1903:16:2"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1903:18:2"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1903:18:2"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1826:5:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1833:66:2",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "eq",
+                      "nodeType": "YulIdentifier",
+                      "src": "1823:2:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1823:77:2"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "1820:2:2"
+                },
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1932:20:2",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1943:5:2"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1950:1:2",
+                        "type": "",
+                        "value": "1"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1939:3:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1939:13:2"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "ret",
+                      "nodeType": "YulIdentifier",
+                      "src": "1932:3:2"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "increment_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1754:5:2",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "ret",
+                "nodeType": "YulTypedName",
+                "src": "1764:3:2",
+                "type": ""
+              }
+            ],
+            "src": "1725:233:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1992:152:2",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2009:1:2",
+                        "type": "",
+                        "value": "0"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2012:77:2",
+                        "type": "",
+                        "value": "35408467139433450592217433187231851964531694900788300625387963629091585785856"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "2002:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2002:88:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "2002:88:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2106:1:2",
+                        "type": "",
+                        "value": "4"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2109:4:2",
+                        "type": "",
+                        "value": "0x11"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "2099:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2099:15:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "2099:15:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2130:1:2",
+                        "type": "",
+                        "value": "0"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2133:4:2",
+                        "type": "",
+                        "value": "0x24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "revert",
+                      "nodeType": "YulIdentifier",
+                      "src": "2123:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2123:15:2"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "2123:15:2"
+                }
+              ]
+            },
+            "name": "panic_error_0x11",
+            "nodeType": "YulFunctionDefinition",
+            "src": "1964:180:2"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2193:79:2",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "2250:16:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "2259:1:2",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "2262:1:2",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "2252:6:2"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "2252:12:2"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "2252:12:2"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "2216:5:2"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "name": "value",
+                                "nodeType": "YulIdentifier",
+                                "src": "2241:5:2"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "cleanup_t_uint256",
+                              "nodeType": "YulIdentifier",
+                              "src": "2223:17:2"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "2223:24:2"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "eq",
+                          "nodeType": "YulIdentifier",
+                          "src": "2213:2:2"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "2213:35:2"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "2206:6:2"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2206:43:2"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "2203:2:2"
+                }
+              ]
+            },
+            "name": "validator_revert_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2186:5:2",
+                "type": ""
+              }
+            ],
+            "src": "2150:122:2"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_payable_to_t_address_payable_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address_payable(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address_payable_t_uint256_t_uint256__to_t_address_payable_t_uint256_t_uint256__fromStack_reversed(headStart , value2, value1, value0) -> tail {\n        tail := add(headStart, 96)\n\n        abi_encode_t_address_payable_to_t_address_payable_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address_payable(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 2,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "146:626:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "146:626:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;411:42;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;462:307;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;380:24;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;411:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;462:307::-;514:4;554:28;585:9;:23;595:12;;585:23;;;;;;;;;;;554:54;;647:10;619:11;:17;;;:39;;;;;;;;;;;;;;;;;;688:5;669:11;:16;;:24;;;;726:1;704:11;:19;;:23;;;;749:12;;747:14;;;;;:::i;:::-;;;;;;;740:21;;;462:307;;;:::o;380:24::-;;;;:::o;7:139:2:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:142::-;523:32;549:5;523:32;:::i;:::-;518:3;511:45;501:61;;:::o;568:118::-;655:24;673:5;655:24;:::i;:::-;650:3;643:37;633:53;;:::o;692:474::-;;895:2;884:9;880:18;872:26;;908:87;992:1;981:9;977:17;968:6;908:87;:::i;:::-;1005:72;1073:2;1062:9;1058:18;1049:6;1005:72;:::i;:::-;1087;1155:2;1144:9;1140:18;1131:6;1087:72;:::i;:::-;862:304;;;;;;:::o;1172:222::-;;1303:2;1292:9;1288:18;1280:26;;1316:71;1384:1;1373:9;1369:17;1360:6;1316:71;:::i;:::-;1270:124;;;;:::o;1400:104::-;;1474:24;1492:5;1474:24;:::i;:::-;1463:35;;1453:51;;;:::o;1510:126::-;;1587:42;1580:5;1576:54;1565:65;;1555:81;;;:::o;1642:77::-;;1708:5;1697:16;;1687:32;;;:::o;1725:233::-;;1787:24;1805:5;1787:24;:::i;:::-;1778:33;;1833:66;1826:5;1823:77;1820:2;;;1903:18;;:::i;:::-;1820:2;1950:1;1943:5;1939:13;1932:20;;1768:190;;;:::o;1964:180::-;2012:77;2009:1;2002:88;2109:4;2106:1;2099:15;2133:4;2130:1;2123:15;2150:122;2223:24;2241:5;2223:24;:::i;:::-;2216:5;2213:35;2203:2;;2262:1;2259;2252:12;2203:2;2193:79;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.5.0;\r\n\r\n/**\r\n * @title Crowdfunding Platform\r\n * @dev Crowdfunding on blockchain\r\n */\r\ncontract CrowdfundingPlatform {\r\n    enum CampaignState { Funding, Funded }\r\n\r\n    struct Campaign {\r\n        address payable owner;\r\n        uint goal;\r\n        uint balance;\r\n        mapping (address => uint) backers;\r\n    }\r\n\r\n    uint public numCampaigns;\r\n    mapping(uint => Campaign) public campaigns;\r\n\r\n    function launchCampaign(uint _goal) public returns (uint) {\r\n        numCampaigns;\r\n        Campaign storage newCampaign = campaigns[numCampaigns];\r\n        newCampaign.owner = payable(msg.sender);\r\n        newCampaign.goal = _goal;\r\n        newCampaign.balance = 0;\r\n\r\n        return ++numCampaigns;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\plgod\\src\\eth-crowdfunding\\solidity\\contracts\\crowdfunding_platform.sol",
+  "ast": {
+    "absolutePath": "/C/Users/plgod/src/eth-crowdfunding/solidity/contracts/crowdfunding_platform.sol",
+    "exportedSymbols": {
+      "CrowdfundingPlatform": [
+        172
+      ]
+    },
+    "id": 173,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 107,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:24:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 108,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:77:1",
+          "text": " @title Crowdfunding Platform\n @dev Crowdfunding on blockchain"
+        },
+        "fullyImplemented": true,
+        "id": 172,
+        "linearizedBaseContracts": [
+          172
+        ],
+        "name": "CrowdfundingPlatform",
+        "nameLocation": "155:20:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CrowdfundingPlatform.CampaignState",
+            "id": 111,
+            "members": [
+              {
+                "id": 109,
+                "name": "Funding",
+                "nameLocation": "204:7:1",
+                "nodeType": "EnumValue",
+                "src": "204:7:1"
+              },
+              {
+                "id": 110,
+                "name": "Funded",
+                "nameLocation": "213:6:1",
+                "nodeType": "EnumValue",
+                "src": "213:6:1"
+              }
+            ],
+            "name": "CampaignState",
+            "nameLocation": "188:13:1",
+            "nodeType": "EnumDefinition",
+            "src": "183:38:1"
+          },
+          {
+            "canonicalName": "CrowdfundingPlatform.Campaign",
+            "id": 122,
+            "members": [
+              {
+                "constant": false,
+                "id": 113,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "272:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "256:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 112,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "256:15:1",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 115,
+                "mutability": "mutable",
+                "name": "goal",
+                "nameLocation": "293:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "288:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 114,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "288:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 117,
+                "mutability": "mutable",
+                "name": "balance",
+                "nameLocation": "313:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "308:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 116,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "308:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 121,
+                "mutability": "mutable",
+                "name": "backers",
+                "nameLocation": "357:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "331:33:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "typeName": {
+                  "id": 120,
+                  "keyType": {
+                    "id": 118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "340:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "331:25:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueType": {
+                    "id": 119,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Campaign",
+            "nameLocation": "236:8:1",
+            "nodeType": "StructDefinition",
+            "scope": 172,
+            "src": "229:143:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "2c0f7b6f",
+            "id": 124,
+            "mutability": "mutable",
+            "name": "numCampaigns",
+            "nameLocation": "392:12:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 172,
+            "src": "380:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 123,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "380:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "141961bc",
+            "id": 129,
+            "mutability": "mutable",
+            "name": "campaigns",
+            "nameLocation": "444:9:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 172,
+            "src": "411:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+              "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign)"
+            },
+            "typeName": {
+              "id": 128,
+              "keyType": {
+                "id": 125,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "419:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "411:25:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+                "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign)"
+              },
+              "valueType": {
+                "id": 127,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 126,
+                  "name": "Campaign",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 122,
+                  "src": "427:8:1"
+                },
+                "referencedDeclaration": 122,
+                "src": "427:8:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                  "typeString": "struct CrowdfundingPlatform.Campaign"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 170,
+              "nodeType": "Block",
+              "src": "520:249:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 136,
+                    "name": "numCampaigns",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 124,
+                    "src": "531:12:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 137,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:12:1"
+                },
+                {
+                  "assignments": [
+                    140
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 140,
+                      "mutability": "mutable",
+                      "name": "newCampaign",
+                      "nameLocation": "571:11:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 170,
+                      "src": "554:28:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                        "typeString": "struct CrowdfundingPlatform.Campaign"
+                      },
+                      "typeName": {
+                        "id": 139,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 138,
+                          "name": "Campaign",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 122,
+                          "src": "554:8:1"
+                        },
+                        "referencedDeclaration": 122,
+                        "src": "554:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 144,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 141,
+                      "name": "campaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 129,
+                      "src": "585:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+                        "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign storage ref)"
+                      }
+                    },
+                    "id": 143,
+                    "indexExpression": {
+                      "id": 142,
+                      "name": "numCampaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "595:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "585:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Campaign_$122_storage",
+                      "typeString": "struct CrowdfundingPlatform.Campaign storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "554:54:1"
+                },
+                {
+                  "expression": {
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 145,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "619:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 147,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 113,
+                      "src": "619:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 150,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "647:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 151,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "647:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "639:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_payable_$",
+                          "typeString": "type(address payable)"
+                        },
+                        "typeName": {
+                          "id": 148,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "639:8:1",
+                          "stateMutability": "payable",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 152,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "639:19:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "619:39:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "619:39:1"
+                },
+                {
+                  "expression": {
+                    "id": 159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 155,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "669:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 157,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "goal",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 115,
+                      "src": "669:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 158,
+                      "name": "_goal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 131,
+                      "src": "688:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "669:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 160,
+                  "nodeType": "ExpressionStatement",
+                  "src": "669:24:1"
+                },
+                {
+                  "expression": {
+                    "id": 165,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 161,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "704:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 163,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 117,
+                      "src": "704:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "30",
+                      "id": 164,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "726:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "704:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 166,
+                  "nodeType": "ExpressionStatement",
+                  "src": "704:23:1"
+                },
+                {
+                  "expression": {
+                    "id": 168,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": true,
+                    "src": "747:14:1",
+                    "subExpression": {
+                      "id": 167,
+                      "name": "numCampaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "749:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 135,
+                  "id": 169,
+                  "nodeType": "Return",
+                  "src": "740:21:1"
+                }
+              ]
+            },
+            "functionSelector": "2664edcd",
+            "id": 171,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "launchCampaign",
+            "nameLocation": "471:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 131,
+                  "mutability": "mutable",
+                  "name": "_goal",
+                  "nameLocation": "491:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "486:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:12:1"
+            },
+            "returnParameters": {
+              "id": 135,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 134,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "514:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 133,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "514:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "513:6:1"
+            },
+            "scope": 172,
+            "src": "462:307:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 173,
+        "src": "146:626:1"
+      }
+    ],
+    "src": "39:735:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/plgod/src/eth-crowdfunding/solidity/contracts/crowdfunding_platform.sol",
+    "exportedSymbols": {
+      "CrowdfundingPlatform": [
+        172
+      ]
+    },
+    "id": 173,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 107,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:24:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 108,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:77:1",
+          "text": " @title Crowdfunding Platform\n @dev Crowdfunding on blockchain"
+        },
+        "fullyImplemented": true,
+        "id": 172,
+        "linearizedBaseContracts": [
+          172
+        ],
+        "name": "CrowdfundingPlatform",
+        "nameLocation": "155:20:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CrowdfundingPlatform.CampaignState",
+            "id": 111,
+            "members": [
+              {
+                "id": 109,
+                "name": "Funding",
+                "nameLocation": "204:7:1",
+                "nodeType": "EnumValue",
+                "src": "204:7:1"
+              },
+              {
+                "id": 110,
+                "name": "Funded",
+                "nameLocation": "213:6:1",
+                "nodeType": "EnumValue",
+                "src": "213:6:1"
+              }
+            ],
+            "name": "CampaignState",
+            "nameLocation": "188:13:1",
+            "nodeType": "EnumDefinition",
+            "src": "183:38:1"
+          },
+          {
+            "canonicalName": "CrowdfundingPlatform.Campaign",
+            "id": 122,
+            "members": [
+              {
+                "constant": false,
+                "id": 113,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "272:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "256:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 112,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "256:15:1",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 115,
+                "mutability": "mutable",
+                "name": "goal",
+                "nameLocation": "293:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "288:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 114,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "288:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 117,
+                "mutability": "mutable",
+                "name": "balance",
+                "nameLocation": "313:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "308:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 116,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "308:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 121,
+                "mutability": "mutable",
+                "name": "backers",
+                "nameLocation": "357:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 122,
+                "src": "331:33:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "typeName": {
+                  "id": 120,
+                  "keyType": {
+                    "id": 118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "340:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "331:25:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueType": {
+                    "id": 119,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Campaign",
+            "nameLocation": "236:8:1",
+            "nodeType": "StructDefinition",
+            "scope": 172,
+            "src": "229:143:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "2c0f7b6f",
+            "id": 124,
+            "mutability": "mutable",
+            "name": "numCampaigns",
+            "nameLocation": "392:12:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 172,
+            "src": "380:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 123,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "380:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "141961bc",
+            "id": 129,
+            "mutability": "mutable",
+            "name": "campaigns",
+            "nameLocation": "444:9:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 172,
+            "src": "411:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+              "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign)"
+            },
+            "typeName": {
+              "id": 128,
+              "keyType": {
+                "id": 125,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "419:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "411:25:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+                "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign)"
+              },
+              "valueType": {
+                "id": 127,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 126,
+                  "name": "Campaign",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 122,
+                  "src": "427:8:1"
+                },
+                "referencedDeclaration": 122,
+                "src": "427:8:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                  "typeString": "struct CrowdfundingPlatform.Campaign"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 170,
+              "nodeType": "Block",
+              "src": "520:249:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 136,
+                    "name": "numCampaigns",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 124,
+                    "src": "531:12:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 137,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:12:1"
+                },
+                {
+                  "assignments": [
+                    140
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 140,
+                      "mutability": "mutable",
+                      "name": "newCampaign",
+                      "nameLocation": "571:11:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 170,
+                      "src": "554:28:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                        "typeString": "struct CrowdfundingPlatform.Campaign"
+                      },
+                      "typeName": {
+                        "id": 139,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 138,
+                          "name": "Campaign",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 122,
+                          "src": "554:8:1"
+                        },
+                        "referencedDeclaration": 122,
+                        "src": "554:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 144,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 141,
+                      "name": "campaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 129,
+                      "src": "585:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$122_storage_$",
+                        "typeString": "mapping(uint256 => struct CrowdfundingPlatform.Campaign storage ref)"
+                      }
+                    },
+                    "id": 143,
+                    "indexExpression": {
+                      "id": 142,
+                      "name": "numCampaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "595:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "585:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Campaign_$122_storage",
+                      "typeString": "struct CrowdfundingPlatform.Campaign storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "554:54:1"
+                },
+                {
+                  "expression": {
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 145,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "619:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 147,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 113,
+                      "src": "619:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 150,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "647:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 151,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "647:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "639:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_payable_$",
+                          "typeString": "type(address payable)"
+                        },
+                        "typeName": {
+                          "id": 148,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "639:8:1",
+                          "stateMutability": "payable",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 152,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "639:19:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "619:39:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "619:39:1"
+                },
+                {
+                  "expression": {
+                    "id": 159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 155,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "669:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 157,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "goal",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 115,
+                      "src": "669:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 158,
+                      "name": "_goal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 131,
+                      "src": "688:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "669:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 160,
+                  "nodeType": "ExpressionStatement",
+                  "src": "669:24:1"
+                },
+                {
+                  "expression": {
+                    "id": 165,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 161,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "704:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$122_storage_ptr",
+                          "typeString": "struct CrowdfundingPlatform.Campaign storage pointer"
+                        }
+                      },
+                      "id": 163,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 117,
+                      "src": "704:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "30",
+                      "id": 164,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "726:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "704:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 166,
+                  "nodeType": "ExpressionStatement",
+                  "src": "704:23:1"
+                },
+                {
+                  "expression": {
+                    "id": 168,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": true,
+                    "src": "747:14:1",
+                    "subExpression": {
+                      "id": 167,
+                      "name": "numCampaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "749:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 135,
+                  "id": 169,
+                  "nodeType": "Return",
+                  "src": "740:21:1"
+                }
+              ]
+            },
+            "functionSelector": "2664edcd",
+            "id": 171,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "launchCampaign",
+            "nameLocation": "471:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 131,
+                  "mutability": "mutable",
+                  "name": "_goal",
+                  "nameLocation": "491:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "486:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:12:1"
+            },
+            "returnParameters": {
+              "id": 135,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 134,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "514:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 133,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "514:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "513:6:1"
+            },
+            "scope": 172,
+            "src": "462:307:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 173,
+        "src": "146:626:1"
+      }
+    ],
+    "src": "39:735:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-05T21:11:35.195Z",
+  "devdoc": {
+    "details": "Crowdfunding on blockchain",
+    "kind": "dev",
+    "methods": {},
+    "title": "Crowdfunding Platform",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,17 +1,22 @@
 import { Injectable } from "@angular/core";
+import { BigNumber, ethers } from "ethers";
 import { Observable, Subject, BehaviorSubject } from "rxjs";
-import Web3 from "web3";
-import { CrowdfundingCampaignContract } from "./models/crowdfunding-campaign.contract";
+import * as Crowdfunding from "./abi/Crowdfunding.json";
 
 @Injectable({
   providedIn: "root",
 })
 export class Web3Service {
-  private web3js: Web3;
-  private isConnected = false;
+  private provider: ethers.providers.Web3Provider;
+  private signer: ethers.Signer;
+  private _isConnected = false;
   private isMetamask: boolean;
   public accounts: string[];
   private primaryAccount = new BehaviorSubject<string>(null);
+
+  public get isConnected(): boolean {
+    return this._isConnected;
+  }
 
   public readonly primaryAccount$: Observable<
     string
@@ -20,48 +25,74 @@ export class Web3Service {
   constructor() {
     this.isMetamask = !!window["ethereum"];
     if (this.isMetamask) {
-      this.web3js = new Web3(window["ethereum"]);
+      console.log("window.ethereum exists, using that provider (likely MetaMask)");
+      this.provider = new ethers.providers.Web3Provider(window["ethereum"]);
+      this.signer = this.provider.getSigner();
+    }
+    else {
+      console.log("No MetaMask, using nothing for now.")
+      // this.provider = new ethers.providers.InfuraProvider("wss://rinkeby.infura.io/ws");
     }
   }
 
-  async connectAccount() {
-    this.accounts = await this.web3js.eth.requestAccounts();
-    console.log(this.accounts);
-    this.primaryAccount.next(this.accounts[0]);
+  async getCampaigns(): Promise<any> {
+    const contract = new ethers.Contract(
+      Crowdfunding.networks[5777].address,
+      Crowdfunding.abi,
+      this.provider
+    )
+
+    const numCampaigns = await contract.numCampaigns();
+    let campaigns: any[] = [];
+
+    for (let i = 0; i < numCampaigns; i++) {
+      const campaign = await contract.campaigns(i);
+      campaigns.push({ owner: campaign.owner, balance: campaign.balance, goal: campaign.goal });
+      console.log(campaign);
+    }
+
+    return campaigns;
   }
 
   getBalance(contractAddress: string): Promise<number> {
-    const contract = new this.web3js.eth.Contract(
-      CrowdfundingCampaignContract,
-      contractAddress
+    const contract = new ethers.Contract(
+      contractAddress,
+      Crowdfunding.abi,
+      this.provider
     );
 
-    return contract.methods.getBalance().call();
+    return contract.getBalance();
   }
 
   getGoal(contractAddress: string): Promise<number> {
-    const contract = new this.web3js.eth.Contract(
-      CrowdfundingCampaignContract,
-      contractAddress
+    const contract = new ethers.Contract(
+      contractAddress,
+      Crowdfunding.abi,
+      this.provider
     );
 
-    return contract.methods.getGoal().call();
+    return contract.getGoal();
   }
 
-  pledge(contractAddress: string, amount: number) {
-    if (!this.primaryAccount.value) {
-      console.error("Web3: pledge called but no account connected");
-      return;
-    }
+  async pledge(campaignId: number, amount: number) {
+    // TODO check if account connected
 
-    const contract = new this.web3js.eth.Contract(
-      CrowdfundingCampaignContract,
-      contractAddress
+    const contract = new ethers.Contract(
+      Crowdfunding.networks[5777].address,
+      Crowdfunding.abi,
+      this.signer
     );
 
-    contract.methods
-      .backCampaign()
-      .send({ from: this.primaryAccount.value, value: amount });
+    await this.connectMetamask();
+
+    contract.pledge(campaignId, {value: BigNumber.from(amount)});
     console.log("Pledge sent to MetaMask");
+  }
+
+  async connectMetamask() {
+    if (!this._isConnected && this.isMetamask) {
+      this.primaryAccount.next(await window["ethereum"].enable());
+      this._isConnected = true;
+    }
   }
 }
